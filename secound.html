@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .navbar {
+            background-color: #333;
+        }
+        .navbar a {
+            color: white;
+        }
+        .section {
+            padding: 50px;
+            text-align: center;
+            transition: background-color 0.3s ease-in-out;
+        }
+ 
+        .highlight {
+            background-color: #1e1e1e;
+        }
+        .disaster-box {
+            padding: 20px;
+            background-color: #1e1e1e;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .disaster-box:hover {
+            transform: scale(1.05);
+        }
+        .contact-form {
+            max-width: 400px;
+            margin: auto;
+            background: #1e1e1e;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+        .contact-form:hover {
+            transform: scale(1.05);
+        }
+        contact-form input, .contact-form textarea {
+        background-color: #ffffff;
+        color: #000000; 
+        border: 1px solid #575757;
+        padding: 10px;
+        margin-top: 10px;
+        transition: all 0.3s ease-in-out;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+            transform: scale(1.02);
+        }
+        .contact-form button {
+            background-color: #007bff;
+            border: none;
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+        .contact-form button:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+            
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        .section {
+            padding: 50px;
+            text-align: center;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .highlight {
+            background-color: #1e1e1e;
+        }
+        h2 {
+    color: red;
+}
+.disaster-heading {
+    color: red;
+    
+}
+.btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">Simple Webpage</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about" data-target="about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services" data-target="services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" data-target="contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="loading-spinner" class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        
+    </nav>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://aihms.in/blog/wp-content/uploads/2022/01/dis1.jpg" class="d-block w-100" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.prismic.io/ellipsis-drive/3c84d3e8-4ce1-4dcd-b4fa-38fc7a0e7fb7_1643557020-f3f6b9f8224be911b2f9c66e12d7a8d3.webp?auto=compress%2Cformat&fit=max" class="d-block w-100" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+                <img src="https://skyrora.com/wp-content/uploads/2021/06/disaster-management.jpg" class="d-block w-100" alt="Slide 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <div class="section" id="about">
+        
+        <h2 class="disaster-heading">Disaster Management</h2>
+
+        <p>Disaster management involves preparing for, responding to, and recovering from natural and man-made disasters. It includes risk assessment, emergency response planning, and implementing strategies to minimize damage and ensure public safety. Effective disaster management helps communities build resilience and recover efficiently from crises.</p>
+    </div>
+
+    <div class="section" id="services">
+        <h2>Our Services</h2>
+        <div class="disaster-section container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="disaster-box">
+                        <h3>Early Warning & Alerts System</h3>
+                        <p>Real-time monitoring and notifications to help communities prepare for impending disasters.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="disaster-box">
+                        <h3>Emergency Response & Coordination</h3>
+                        <p>Ensuring a quick and effective response by coordinating efforts among agencies and first responders.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="disaster-box">
+                        <h3>Resource & Relief Management</h3>
+                        <p>Efficient distribution of essential supplies and aid to affected areas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="contact">
+        <h2>Contact Us</h2>
+        
+        
+        <div class="contact-form">
+            
+            
+            <form>
+                <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                <textarea class="form-control" name="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn btn-primary w-100 mt-3">Send Message</button>
+            </form>
+        </div>
+        <button onclick="window.location.href='volunteer.html'" class="btn btn-success mt-4">Become a Volunteer</button>
+        <button onclick="window.location.href='helpmi.html'" class="btn btn-success mt-4">Help mi</button>
+        <button onclick="window.location.href='Livemap.html'" class="btn btn-primary mt-4">Map</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded',
+::contentReference[oaicite:0]{index=0}
